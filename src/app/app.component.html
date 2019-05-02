@@ -1,0 +1,17 @@
+<app-header [inputSideNav]="sideNav"></app-header>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #sideNav class="example-sidenav" mode="side">
+    <app-side-nav></app-side-nav>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="sideNav.toggle()">
+      Toggle sidenav
+    </button>
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>
+
+
